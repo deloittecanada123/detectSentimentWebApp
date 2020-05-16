@@ -23,7 +23,7 @@ namespace detectSentimentWebApp.Controllers
         public IActionResult Index()
         {
             string endpoint = "https://detectsentimentaris.cognitiveservices.azure.com/"; // insert your endpoint
-            string key = "aba934b96e4c4f058d93add4a1182a88"; // insert your key
+            string key = "aba934b96e4c4f058d93add4a1182a88"; // insert your keyy
 
             var credentials = new ApiKeyServiceClientCredentials(key);
             var client = new TextAnalyticsClient(credentials)

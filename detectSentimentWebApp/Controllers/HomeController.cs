@@ -9,6 +9,9 @@ using detectSentimentWebApp.Models;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using static detectSentimentWebApp.Models.detectSentiment;
 
+// git pull
+// git push origin master
+
 namespace detectSentimentWebApp.Controllers
 {
     public class HomeController : Controller
@@ -34,6 +37,10 @@ namespace detectSentimentWebApp.Controllers
             var result = client.Sentiment("I had the best day of my life.", "en");
 
             ViewBag.Score = result.Score;
+
+            result = client.Sentiment("Man, this place really sucks so much", "en");
+
+            ViewBag.Score2 = result.Score;
 
             return View();
         }
